@@ -12,5 +12,15 @@ pipeline{
         sh './script.sh'
       }
     }
+    stage('Check python'){
+      steps{
+        sh 'python3 --version'
+      }
+    }
+    stage('Run Pyton File'){
+      steps{
+        sh 'python3 app.py'
+      }
+    }
   }
 }
